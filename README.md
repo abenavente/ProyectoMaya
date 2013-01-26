@@ -8,3 +8,9 @@ El proyecto presenta un caso para implementar un portal de informaciòn acerca d
 
 Documentacion en Google Docs
 https://docs.google.com/document/d/1fGlUSLVkWjHEpEdFYpbPQ40FS_F_M5UU4yY16eYA590/edit#heading=h.t24wdjehsrnc
+
+Historias de Usuario en scrumy
+http://scrumy.com/ProyectoMaya
+
+Administracion del proyecto
+https://projects.zoho.com/portal/nemesis319
