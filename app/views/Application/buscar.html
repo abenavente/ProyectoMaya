@@ -1,0 +1,50 @@
+#{extends 'main.html' /} 
+#{set title:'Home' /}
+<meta charset="utf-8">
+<div class="container-narrow">    	
+	<form class="form-horizontal" action="@{Application.buscar()}" method="get">
+		<div class="control-group">
+			<label class="control-label" for="inputEmail">Compara Pé</label>
+			<div class="controls">
+				<input type="search" name="farmaco" class="input-xxlarge" id="inputEmail" placeholder="Buscar" value="${farmaco}">
+				<button class="btn btn-primary"><i class="icon-search icon-white"></i> Buscar</button>
+			</div>
+		</div>
+	</form>
+	<table class="table table-bordered table-condensed table-hover table-striped">
+		<thead>
+			<tr>
+				<th>ESTABLECIMIENTO</th>
+				<th>NOMBRE</th>
+				<th>PRECIO</th>
+				<th width="3%">VER</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>INKAFARMA</td>
+				<td>PANADOL</td>
+				<td>1.2</td>
+				<td><a class="btn btn-mini" href="@{Application.ver(codigoFarmacia)}"><i class="icon-arrow-right"></i></a></td>
+			</tr>
+			<tr>
+				<td>INKAFARMA</td>
+				<td>PANADOL</td>
+				<td>1.2</td>
+				<td><a class="btn btn-mini" href="@{Application.ver(codigoFarmacia)}"><i class="icon-arrow-right"></i></a></td>
+			</tr>
+			<tr>
+				<td>INKAFARMA</td>
+				<td>PANADOL</td>
+				<td>1.2</td>
+				<td><a class="btn btn-mini" href="@{Application.ver(codigoFarmacia)}"><i class="icon-arrow-right"></i></a></td>
+			</tr>
+			<tr>
+				<td>INKAFARMA</td>
+				<td>PANADOL</td>
+				<td>1.2</td>
+				<td><a class="btn btn-mini" href="@{Application.ver(codigoFarmacia)}"><i class="icon-arrow-right"></i></a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
