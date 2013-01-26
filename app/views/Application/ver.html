@@ -1,0 +1,80 @@
+#{extends 'main.html' /} 
+#{set title:'Home' /}
+<meta charset="utf-8">
+<div class="container-narrow">    	
+	<div class="row-fluid">
+		<div class="span6">
+			<div id="map_canvas" style="width:450px; height:300px">				
+			</div>
+		</div>
+		<div class="span6">
+			<h2>BOTICA INKAFARMA</h2>
+			<p><strong>Panadol Antigripal 120mg</strong></p>
+			<p>Direccion : Jr Quilca 401</p>
+			<p>Telefono : 574-7870</p>
+			<p>Departamento : Lima </p>
+			<p>Provincia : Callao </p>
+			<p>Distrito : Callao</p>
+			<button class="btn" id="addPedido"><i class="icon-shopping-cart "></i> Realizar Pedido</button>
+		</div>
+	</div>
+	<br/><br/><br/>
+	<div class="row-fluid hide" id="pedido">
+		<div class="span5 offset3">
+			<form class="form-horizontal">
+				<h3>Realize su pedido</h3>
+				<div class="control-group">
+					<label class="control-label">Nombre</label>
+					<div class="controls">
+						<input type="text" id="" name=""/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Telefono</label>
+					<div class="controls">
+						<input type="text" id="" name=""/>
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">Descripcion</label>
+					<div class="controls">
+						<textarea rows="" cols=""></textarea>
+					</div>
+				</div>
+				<div class="form-actions">
+					<button type="button" class="btn btn-primary" id="enviarPedido"><i class="icon-ok icon-white"></i> Enviar</button>
+					<button type="button" class="btn" id="cancelarPedido"><i class="icon-remove"></i> Cancelar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript"
+    src="https://maps.google.com/maps/api/js?sensor=true">
+</script>
+<script type="text/javascript">
+(function(){
+	function init(){
+		$(document).delegate("#addPedido","click",addPedido);
+		$("#pedido").delegate("#cancelarPedido","click",cancelar);
+		maps();		
+	}
+	function cancelar(){
+		$("#pedido").addClass("hide").find("input:text,textarea").val("");
+	}
+	function addPedido(){		
+		$("#pedido").removeClass("hide").slideDown();
+		location.href="#pedido";
+	}
+	function maps(){
+		var latlng = new google.maps.LatLng(-12.026115,-77.094734);
+	    var myOptions = {
+	      zoom: 16,
+	      center: latlng,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+	    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	}
+	return init();
+})();
+</script>

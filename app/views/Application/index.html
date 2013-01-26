@@ -1,0 +1,14 @@
+#{extends 'main.html' /} #{set title:'Home' /}
+<meta charset="utf-8">
+<div class="container-narrow">
+	<div class="jumbotron">
+		<h1>Compara Pé</h1>
+		<form class="form-search" action="@{Application.buscar()}" method="GET">
+			<input type="search" name="farmaco" class="input-xxlarge search-query" style="height: 30px"> 
+			<br/><br/>
+			<button type="submit" class="btn btn-large btn-primary">
+				<i class="icon-search icon-white"></i> Buscar
+			</button>
+		</form>
+	</div>
+</div>
